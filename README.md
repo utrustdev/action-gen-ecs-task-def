@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Generate task definition
         id: task_def
-        uses: ./.github/actions/gen_ecs_task_def
+        uses: utrustdev/action-gen_ecs_task_def
         with:
           template: <task_definition_template_file>
           dictionary: <json_file_with_secrets>
