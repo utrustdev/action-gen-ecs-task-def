@@ -1,0 +1,25 @@
+name: Generate an ECS task definition
+description: Generates an ECS task definition from a template file and a JSON list of secrets
+
+inputs:
+  template:
+    description: 'The path to the ECS task definition template file'
+    required: true
+  dictionary:
+    description: 'JSON list of secrets'
+    required: true
+  image:
+    description: 'The URI of the container image to insert into the ECS task definition'
+    required: true
+
+outputs:
+  file:
+    description: 'The path to the rendered task definition file'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.template }}
+    - ${{ inputs.dictionary }}
+    - ${{ inputs.image }}
