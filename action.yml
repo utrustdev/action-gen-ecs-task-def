@@ -11,6 +11,9 @@ inputs:
   image:
     description: 'The URI of the container image to insert into the ECS task definition'
     required: true
+  tag:
+    description: 'The git tag to refer to'
+    required: true
 
 outputs:
   file:
@@ -23,3 +26,4 @@ runs:
     - ${{ inputs.template }}
     - ${{ inputs.dictionary }}
     - ${{ inputs.image }}
+    - ${{ inputs.tag }}
