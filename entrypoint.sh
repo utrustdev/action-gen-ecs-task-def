@@ -7,7 +7,7 @@ dictionary=$2
 image=$3
 tag=$4
 parsed_tag=$(echo $tag | sed 's|.*/||')
-image=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$3:$parsed_tag
+image=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$image:$parsed_tag
 
 /gen.py \
   --template $template \
