@@ -47,7 +47,8 @@ def main(args):
     try:
         print(template.substitute(dictionary))
     except KeyError as e:
-        print("Error: Key " + e.args[0] + " not set")
+        sys.stderr.write("Error: Key " + e.args[0] + " not set")
+        sys.exit(1)
 
 if __name__ == "__main__":
     main(sys.argv[1:])
