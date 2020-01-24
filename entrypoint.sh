@@ -14,6 +14,7 @@ image=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$image:$parsed_tag
   --dictionary $dictionary \
   -a DOCKER_IMAGE=$image \
   -a GIT_HASH=$parsed_tag \
+  -a RELEASE=$parsed_tag \
   > $output
 
 echo ::set-output name=file::$output
