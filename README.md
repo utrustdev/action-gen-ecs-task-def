@@ -4,7 +4,7 @@ Generates an ECS task definition from a template file and a JSON list of secrets
 
 ## Usage
 
-```
+```yml
 jobs:
   deploy:
     steps:
