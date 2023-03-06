@@ -18,4 +18,4 @@ output="output-${template_no_slashes}.json"
   -a RELEASE=$parsed_tag \
   > $output
 
-echo ::set-output name=file::$output
+echo "file=${output}" >> $GITHUB_OUTPUT

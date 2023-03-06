@@ -1,4 +1,4 @@
-FROM python:2.7.17-alpine3.10
+FROM python:3.11.2-alpine3.17
 
 COPY entrypoint.sh /entrypoint.sh
 COPY gen.py /gen.py
